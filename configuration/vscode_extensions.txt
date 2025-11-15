@@ -1,0 +1,4 @@
+ms-python.python
+silofy.hackthebox
+ms-vscode.powershell
+nilssoderman.batch-runner

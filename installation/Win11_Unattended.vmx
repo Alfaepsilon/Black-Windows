@@ -3,7 +3,7 @@ config.version = "8"
 virtualHW.version = "19"
 
 # VM identity
-displayName = "Black-Windowsv2"
+displayName = "Black-Windows"
 guestOS = "windows11-64"
 
 # Resources
@@ -14,7 +14,7 @@ numvcpus = "2"
 scsi0.present = "TRUE"
 scsi0.virtualDev = "lsilogic"
 scsi0:0.present = "TRUE"
-scsi0:0.fileName = "Black-Windowsv2.vmdk"
+scsi0:0.fileName = "Black-Windows.vmdk"
 
 # Boot from ISO
 ide1:0.present = "TRUE"
@@ -24,7 +24,7 @@ ide1:0.deviceType = "cdrom-image"
 # TPM with encryption
 tpm.present = "TRUE"
 encryption.keySafe = "TPM"
-encryption.keySafePassword = "Password123"
+encryption.keySafePassword = "<lmaoxd>"
 
 # Networking (default NAT)
 ethernet0.present = "TRUE"

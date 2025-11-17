@@ -24,8 +24,8 @@ xcopy /Y autounattend.xml Win11_Unattended\
 vmware-vdiskmanager -c -s 64GB -a lsilogic -t 2 Black-Windowsv2.vmdk
 
 @REM Start Virtual Machine using VSIX configuration file to skip tedious setup windows.
-vmrun start "Black-Windowsv2.vmx" nogui
+vmrun start "Black-Windows.vmx" nogui
 
 @REM @REM Takes a snapshot directly after VM installation.
-@REM vmrun snapshot "Black-Windowsv2.vmx" "CleanInstall"
+@REM vmrun snapshot "Black-Windows.vmx" "CleanInstall"
 endlocal

@@ -1,0 +1,33 @@
+.encoding = "UTF-8"
+config.version = "8"
+virtualHW.version = "19"
+
+# VM identity
+displayName = "Black-Windowsv2"
+guestOS = "windows11-64"
+
+# Resources
+memsize = "4096"
+numvcpus = "2"
+
+# Disk (64 GB single file, created separately with vmware-vdiskmanager)
+scsi0.present = "TRUE"
+scsi0.virtualDev = "lsilogic"
+scsi0:0.present = "TRUE"
+scsi0:0.fileName = "Black-Windowsv2.vmdk"
+
+# Boot from ISO
+ide1:0.present = "TRUE"
+ide1:0.fileName = "Win11_Unattended.iso"
+ide1:0.deviceType = "cdrom-image"
+
+# TPM with encryption
+tpm.present = "TRUE"
+encryption.keySafe = "TPM"
+encryption.keySafePassword = "Password123"
+
+# Networking (default NAT)
+ethernet0.present = "TRUE"
+ethernet0.connectionType = "nat"
+ethernet0.virtualDev = "e1000e"
+ethernet0.addressType = "generated"
